@@ -40,7 +40,7 @@ def get_msg_stats(df):
 
 def wordMap_without_stopwords(df):
     df['message'] = df['message'].apply(lambda x: x.lower())
-    f = open('stop_hinglish.txt', 'r')
+    f = open('stopwords.txt', 'r')
     stopwords = f.read()
     words = []  # of entire words in msg columns
     for msg in df['message']:
